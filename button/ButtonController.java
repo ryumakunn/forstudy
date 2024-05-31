@@ -16,7 +16,27 @@ public class ButtonController {
 
     @PostMapping("/buttonClicked")
     public String buttonClicked(@RequestParam String button, Model model) {
-        model.addAttribute("button", button);
+        String message;
+        switch (button) {
+            case "Button 1":
+                message = "You clicked Button 1";
+                // Button 1をクリックしたときの処理
+                break;
+            case "Button 2":
+                message = "You clicked Button 2";
+                // Button 2をクリックしたときの処理
+                break;
+            case "Button 3":
+                message = "You clicked Button 3";
+                // Button 3をクリックしたときの処理
+                break;
+            default:
+                message = "Unknown button";
+                // 未知のボタンをクリックしたときの処理
+                break;
+            }
+        model.addAttribute("message", message);
         return "index";
     }
+
 }
