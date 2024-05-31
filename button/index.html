@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Button Demo</title>
+</head>
+<body>
+    <h1>Button Demo</h1>
+    <form action="/buttonClicked" method="post">
+        <button type="submit" name="button" value="Button 1">Button 1</button>
+        <button type="submit" name="button" value="Button 2">Button 2</button>
+        <button type="submit" name="button" value="Button 3">Button 3</button>
+    </form>
+    <p th:text="'You clicked: ' + ${button}"></p>
+</body>
+</html>
