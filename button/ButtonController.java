@@ -15,9 +15,9 @@ public class ButtonController {
     }
 
    public String buttonClicked(@RequestParam String button, Model model) {
-     logger.info("Button clicked: " + button);  // ログにメッセージを出力
-    model.addAttribute("button", button);
-    return "index";
-}
+        logger.info("Button clicked: " + button);  // ログにメッセージを出力
+        model.addAttribute("button", button);
+        return "index";
+    }
 
 }
