@@ -2,10 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Button Demo</title>
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // デフォルトのフォーム送信を防止
+            // ここにフォームの送信処理を追加
+        }
+    </script>
 </head>
 <body>
     <h1>Button Demo</h1>
-    <form action="/buttonClicked" method="post">
+    <form onsubmit="submitForm(event)">
         <button type="submit" name="button" value="Button 1">Button 1</button>
         <button type="submit" name="button" value="Button 2">Button 2</button>
         <button type="submit" name="button" value="Button 3">Button 3</button>
